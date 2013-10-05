@@ -1,15 +1,24 @@
  
 var CZ = CZ || {};
 var CZ = {
-    imgs: ["band", "car", "woman"],
+    imgs: ["band", "car", "women"],
+    counter: 0,
     init: function(action) {
         this.resize();
-        this.imageCarousel();
+        this.imageCarouselInit();
     },
-    imageCarousel: function () {
- 
+    imageCarouselInit: function () {
+        setInterval(function() {CZ.imageCarouselUpdate()}, 5000); 
     },
+    imageCarouselUpdate: function () {
+        $('body').css({"background-image": "url(img/bg/" + this.imgs[this.counter] + ".jpg)"});
+        if (this.counter == this.imgs.length-1) {
+            this.counter = 0;
+        } else {
+            this.counter++;
+        }
 
+    },
     resize: function () {
         CONFIG.currentW = $(window).width();
         CONFIG.currentH = $(window).height();

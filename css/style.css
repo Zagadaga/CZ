@@ -26,7 +26,7 @@ body {
   width: 100%;
   min-width: 1000px;
   overflow: hidden;
-  background: #ddd url(../img/bg/car.jpg) no-repeat center center;
+  background: #111 url(../img/bg/car.jpg) no-repeat center center;
   background-size: cover;
 }
  
