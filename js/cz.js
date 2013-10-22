@@ -6,6 +6,7 @@ var CZ = {
     init: function(action) {
         this.resize();
         this.imageCarouselInit();
+        
     },
     imageCarouselInit: function () {
         setInterval(function() {CZ.imageCarouselUpdate()}, 5000); 
